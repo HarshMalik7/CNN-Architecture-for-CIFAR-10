@@ -28,4 +28,17 @@ Your next task is to train a neural network with the basic architecture describe
 For a given batch size b, your network should receive a b × 3 × 32 × 32 tensor composed of b images of shape 3 × 32 × 32 and output a b × 10 logits matrix O. You should use a cross entropy loss for training.
 You should make the remaining decisions (such as hyperparameter settings) by yourself.
 
+# 4 Improving the results
+Your next task is to improve the results of your initial implementation. You should train different neural networks in the training dataset to find a neural network that achieves the highest possible accuracy in the testing dataset. Your mark will depend on this accuracy.
 
+Note that you are being asked to use the testing dataset as if it were a validation dataset in order to simplify this assignment. This is generally a methodological mistake, since a testing dataset should only be used to assess generalization after the hyperparameters are chosen (rather than used to choose hyperparameters).
+
+You are not allowed to radically change the basic architecture described in Section 2. For example, each intermediate block must weight the outputs of independent convolutional layers using coefficients obtained by a fully connected layer that receives the average value of each chan- nel of the input image. As a general rule, reverting your implementation to an implementation of the basic architecture described in Section 2 should be trivial.
+
+If you are not sure whether a change would be considered too radical, please ask. This assignment is intended to assess whether you are able to implement an architecture based on a high-level description (rather than copying or adapting existing code). Therefore, you will receive no marks if you implement an architecture that is not clearly based on the basic architecture described in Section 2, regardless of its performance.
+
+You should store the following statistics about the neural network that achieves the highest accuracy in the testing dataset: loss for each training batch, training accuracy after each epoch, and testing accuracy after each epoch. You should plot the loss for each training batch. You should also plot the training accuracy and testing accuracy for each training epoch.
+
+
+# Results
+Given the guidelines above for my coursework, the model I constructed gave me 85% accuracy on the test dataset. The constructed model is present in this repository.
